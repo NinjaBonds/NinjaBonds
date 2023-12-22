@@ -1,0 +1,144 @@
+package Stepdefinition;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import java.lang.System;
+import java.time.Duration;
+
+
+public class Home{
+	public static WebDriver driver;
+	static String URL = "https://dsportalapp.herokuapp.com/";
+	static By getstartedbtn = By.xpath("//button[@class='btn']");
+    static By getstarted1 = By.xpath("//a[@href='data-structures-introduction']");
+	static By alert1 = By.xpath("//div[@class='alert alert-primary']");
+	static By dsdropdown = By.xpath("//a[@class='nav-link dropdown-toggle']");	
+	static By dsdditem = By.xpath("//a[@class='dropdown-item']");
+	static By loginbut = By.xpath("//a[@href='/login']");
+	static By Registerbut = By.xpath("//a[@href='/register']");
+	
+	
+@Given("user opens DSalgo page")
+static public void user_opens_d_salgo_page(){
+    // Write code here that turns the phrase above into concrete actions
+	
+	//System.setProperty("webdriver.chrome.driver","C:/Users/Chand/Downloads/chromedriver-win64(1)/chromedriver-win64\\chromedriver.exe");
+
+	driver = new ChromeDriver();
+	driver.get("https://dsportalapp.herokuapp.com/");
+
+	System.out.println("User opens homepage");
+	
+    }
+
+@When("The user clicks any of the Get Started buttons below the data structures")
+static public void the_user_clicks_any_of_the_buttons_below_the_data_structures() {
+    // Write code here that turns the phrase above into concrete actions
+    driver.findElement(getstartedbtn).click();
+     driver.findElement(getstarted1).click();
+     
+	String str = driver.findElement(alert1).getText();
+	System.out.println("str:"+str);
+	
+	System.out.println("The user clicks any of the {string} buttons below the data structures:");
+}
+
+@Then("user opens homepage")
+static public void user_opens_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+	
+	System.out.println("User opens Home page");
+	
+	
+}
+
+@Then("The user should see six panes with different data structires")
+static public void the_user_should_see_six_panes_with_different_data_structires() {
+    // Write code here that turns the phrase above into concrete actions
+    
+	System.out.println("User should see 6 panes");
+}
+
+@When("The user clicks Data Structures drop down")
+static public void the_user_clicks_drop_down() {
+    // Write code here that turns the phrase above into concrete actions
+    
+	//driver.findElement(dsdropdown).click();
+	driver.findElement(dsdropdown).click();
+	
+}
+
+@Then("The user should see six different data structure entries in that dropdown")
+static public void the_user_should_see_different_data_structure_entries_in_that_dropdown() {
+    // Write code here that turns the phrase above into concrete actions
+	System.out.println("check entries");
+	
+}
+
+@When("user clicks any dropdown")
+static public void user_clicks_any_dropdown() {
+    // Write code here that turns the phrase above into concrete actions
+	
+	driver.findElement(dsdditem).click();
+	System.out.println("User clicks any dropdown");
+
+}
+
+@Then("It should alert the user with a message You are not logged in")
+static public void it_should_alert_the_user_with_a_message() {
+    // Write code here that turns the phrase above into concrete actions
+	//string = driver.findElement(alert1).getText();
+	String Stri = driver.findElement(alert1).getText();
+	System.out.println("str1:"+Stri);
+	driver.manage().window().maximize();
+	WebDriverWait bb = new WebDriverWait(driver, Duration.ofSeconds(3));
+	
+	System.out.println("loginb:"+bb);
+	driver.findElement(loginbut).click();
+	}
+
+@When("user clicks sign in")
+static public void user_clicks_sign_in() {
+    // https://dsportalapp.herokuapp.com/login
+	//driver.navigate().to(string);
+	
+	System.out.println("click login button");
+	driver.findElement(loginbut).click();
+		
+}
+
+@Then("The user should be redirected to Sign in page")
+static public void the_user_should_be_redirected_to_sign_in_page() {
+    // Write code here that turns the phrase above into concrete actions
+	System.out.println("Go to sign in page");
+	driver.navigate().to("https://dsportalapp.herokuapp.com/login");
+}
+
+@When("User clicks Register")
+static public void user_clicks() {
+    // Write code here that turns the phrase above into concrete actions
+	//driver.navigate().to(string);
+	driver.findElement(Registerbut).click();
+	System.out.println("user clicks Register button");
+}
+
+@Then("The user should be directed to Register form")
+static public void the_user_should_be_directed_to_register_form() {
+    // Write code here that turns the phrase above into concrete actions
+    System.out.println("Go to register form");
+    driver.navigate().to("https://dsportalapp.herokuapp.com/register");
+}
+
+	
+	
+}
+	
+	
+
+
+

@@ -1,0 +1,63 @@
+package Utilities;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Stepdefinition.BaseClass;
+
+
+
+public class Helper extends BaseClass {
+ public static Helper Helper;    
+    public static WebDriver driver ;
+    public static WebDriverWait wait ;
+    public final static int TIMEOUT = 2;
+    
+    public Helper() {
+	// Helper.driver = driver;
+    }
+    
+    public static void initiatdriver() {
+    	
+     driver = new ChromeDriver();
+     wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+     System.out.println(wait);
+     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+     driver.manage().window().maximize();
+            }
+    public static void openPage(String URL) {
+        driver.get(URL);
+    }
+    public static String getTitle() {
+        return driver.getTitle();
+    }
+    public static void NavBack() {
+     driver.navigate().back();
+    }
+    public static void waitmethod() throws InterruptedException {
+    	wait.wait(2);
+    }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    
+    
+    public static WebDriver getDriver() {
+     return driver;
+                                        }
+  //  public static void setUpDriver() {
+  //      if (Helper==null) {
+  //          Helper = new Helper();
+      //  }
+ //   }
+     public static void tearDown() {
+         if(driver!=null) {
+             driver.close();
+             driver.quit();
+         }
+         Helper = null;
+     }
+
+    }

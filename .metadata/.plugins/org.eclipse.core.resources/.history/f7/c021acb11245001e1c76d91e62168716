@@ -1,0 +1,38 @@
+package day_01;
+
+public class student {
+	
+	int maths=0;
+	int science=0;
+	int english=0;
+	int socials=0;
+	
+	int totals()
+	{
+		int total = maths + science + english + socials;
+		
+		System.out.println(total);
+	}
+	
+	void average()
+	{
+		int avergemk = (total/4);
+		
+		System.out.println(avergemk);
+	}
+	
+	public static void main(String args[]) {
+		
+		student obj1 = new student();
+		
+		obj1.maths=90;
+		obj1.english=30;
+		obj1.science=100;
+		obj1.socials=88;
+		
+		obj1.totals();
+		obj1.average();
+		
+	}
+	
+}

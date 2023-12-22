@@ -1,0 +1,30 @@
+package Stepdefinition;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+
+
+import PageObjects.Arraypage;
+
+import Utilities.ExcelReader;
+import Utilities.ExcelReaderc;
+
+public class LinkedListsteps extends LinkedList{
+	
+	 private String excelFilePath;
+	 public String Input;
+
+	 
+	 
+	 @Given("User is in homepage")
+	 public void user_is_in_homepage() throws InterruptedException {
+			
+		 System.out.println("User is in homepage");
+	 }
+}

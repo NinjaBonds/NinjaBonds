@@ -1,0 +1,24 @@
+package day_01;
+
+public class rearrange {
+	
+	    public static void main(String arg[]) {
+	      String s = "aab";
+	      int C = 0;
+	      for (int i=0;i<s.length();i++)
+	      {   
+	    	 
+	         char b,d;
+	         b = s.charAt(i);
+	         d = s.charAt(i+1);
+	         if (Character(b) != Character(d))
+
+	          C = C + 1;
+
+	      }
+	      System.out.println(C); 
+	      }
+
+	    }
+
+

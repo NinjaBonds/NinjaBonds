@@ -1,0 +1,42 @@
+package PageObjects;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import Utilities.Helper;
+
+ public class Loginpage extends Helper {
+  
+        static By signin = By.xpath("//a[@href='/login']");
+        protected static By Username = By.xpath("//*[@id='id_username']");
+        protected static By Password = By.xpath("//*[@id='id_password']");
+        protected static By loginbutt = By.xpath("//input[@value='Login']");
+	    static By Registerbut = By.xpath("/html/body/div[2]/div/div[2]/a");
+	    static By signout = By.xpath("/html/body/div[2]/div/div[2]/a");
+        
+        public static void clicksigninlink() throws InterruptedException {
+            
+            //	WebDriverWait bb = new WebDriverWait(driver, Duration.ofSeconds(3));
+            //	wait(TIMEOUT);
+            	System.out.println("loginb:"+wait);
+            	driver.findElement(signin).click();
+            	driver.navigate().to("https://dsportalapp.herokuapp.com/login");
+            }
+              
+        public static void clicksigninbut() {
+		   driver.findElement(signin).click();	
+		}
+        
+        public static void clickloginbut() {
+ 		   driver.findElement(loginbutt).click();	
+ 		}
+     
+        public static void clickregisterlink() {
+        	driver.findElement(Registerbut).click();
+        	driver.navigate().to("https://dsportalapp.herokuapp.com/register");
+        }
+        
+        
+        }
+ 

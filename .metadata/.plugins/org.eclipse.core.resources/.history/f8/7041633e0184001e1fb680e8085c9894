@@ -1,0 +1,19 @@
+@tag
+Feature: Dsalgo Home Page
+
+  @tag1
+  Scenario: 
+    Given user opens DSalgo page
+    When The user clicks any of the Get Started buttons below the data structures
+    Then user opens homepage
+    And The user should see six panes with different data structires
+    When The user clicks Data Structures drop down
+    Then The user should see six different data structure entries in that dropdown
+    And user clicks any dropdown
+    Then It should alert the user with a message You are not logged in
+    When The user clicks any of the Get Started buttons below the data structures
+    Then It should alert the user with a message You are not logged in
+    When user clicks sign in
+    Then The user should be redirected to Sign in page
+    When User clicks Register
+    Then The user should be directed to Register form

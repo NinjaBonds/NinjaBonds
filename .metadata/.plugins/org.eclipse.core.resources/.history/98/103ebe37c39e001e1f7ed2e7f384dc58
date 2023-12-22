@@ -1,0 +1,25 @@
+@tag
+Feature: Linkedlist module
+
+  @tag1
+  Scenario: Linkedlist module
+    Given User is in homepage
+    When User clicks the Getting Started button in "Linked List" Pane
+    Then User be directed to "Linked List" Data Structure Page
+    When User select "Linked List" item from the drop down menu
+    Then User be directed to "Linked List" Data Structure Pages
+    When The user clicks "Introduction" button
+    Then The user should be redirected to "Introduction" page
+    When The user clicks "Try Here" button in Arrays in Python page
+    Then The user should be redirected to a page having an tryEditor with a Run button to test
+
+  @tag2
+  Scenario Outline: user enter python code "<Input>"
+    Given The excel file is located "C:\Users\chand\eclipse-workspace\dsalgo-project\src\test\java\testData\Ds-text.xlsx"
+    When User enters sheetname as "<sheetname>" and rowNumber <rowNumber>
+    And User clicks on run button
+    Then output "<output>" is generated
+
+    Examples: 
+      | sheetname | rowNumber |
+      | text      |         0 |

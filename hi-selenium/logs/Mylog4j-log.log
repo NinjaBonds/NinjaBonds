@@ -1,0 +1,3 @@
+[ERROR]2023-10-1811:22:42.540[main]dsutilities.LoggerLoad1)-Error - You can not divide a number by zero
+[INFO ]2023-10-1811:22:42.552[main]dsutilities.LoggerLoad1)-Info  - Addition of integers
+[WARN ]2023-10-1811:22:42.553[main]dsutilities.LoggerLoad1)-Warning - Testing

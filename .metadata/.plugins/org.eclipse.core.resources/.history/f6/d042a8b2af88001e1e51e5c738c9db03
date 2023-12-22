@@ -1,0 +1,8 @@
+package Stepdefinition;
+
+import PageObjects.Homepage;
+
+public class BaseClass {
+ public Homepage homepage;
+
+}

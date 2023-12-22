@@ -1,0 +1,118 @@
+package day_01;
+
+public class salary {
+	
+double basic;
+double boa;
+double bonus;
+double pf;
+static double monthlygr;
+static double yearlygr;
+static double yearlytax;
+static double monthlytax;
+static double monthlytkhm;
+
+double monthlygrs(double basic,double boa,double bonus,double pf) {
+	
+	 monthlygr=(basic+boa+bonus)-pf;
+	
+	return monthlygr;
+		}
+
+
+
+double yearlygr() {
+	
+
+	yearlygr=(monthlygr*12);
+	
+	return yearlygr;
+		}
+
+double yearlytx() {
+	if ( basic == 7000){
+	
+	 yearlytax=(yearlygr*0.05); 
+	
+	return yearlytax;
+		}
+	else if (basic == 10000) {
+		
+		yearlytax=(yearlygr*0.05);
+		
+		return yearlytax;
+	}
+	else if(basic == 12000) {
+			
+			yearlytax=(yearlygr*0.10);
+			
+			return yearlytax;
+		}
+	else
+	{
+		yearlytax=(yearlygr*0.20);
+		
+		return yearlytax;
+	}
+	}
+	
+
+
+double monthlytx() {
+	
+	
+	 monthlytax=(yearlytax/12);
+	
+	return monthlytax;
+		}
+
+double monthlytk() {
+	
+	
+	monthlytkhm=(monthlygr-monthlytax);
+	
+	return monthlytkhm;
+		}
+
+public static void main(String[] args) {
+	
+ salary obj1=new salary();
+    
+	obj1.monthlygrs(7000,5000,2000,0.05);
+	obj1.yearlygr();
+	obj1.yearlytx();
+	obj1.monthlytx();
+	obj1.monthlytk();
+	
+	
+	
+	
+	System.out.println("Monthly gross" + monthlygr);
+	System.out.println("yearly gross" + yearlygr);
+	System.out.println("yearly tax" + yearlytax);
+	System.out.println("Monthly tax" + monthlytax);
+	System.out.println("Monthly take home" + monthlytkhm);
+ }
+ 
+ else if basic = 10000{
+	 
+	 obj1.monthlygrs(10000,5000,2000,0.05);
+		obj1.yearlygr();
+		obj1.yearlytx();
+		obj1.monthlytx();
+		obj1.monthlytk();
+		
+		obj1.monthlytx();
+		
+		
+		System.out.println("Monthly gross" + monthlygr);
+		System.out.println("yearly gross" + yearlygr);
+		System.out.println("yearly tax" + yearlytax);
+		System.out.println("Monthly tax" + monthlytax);
+		System.out.println("Monthly take home" + monthlytkhm);
+ }
+
+ else if basic
+}
+
+}

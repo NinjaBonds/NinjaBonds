@@ -1,0 +1,12 @@
+package day_01;
+
+public class sumofintegers {
+
+	public static void main(String args[]) {
+		int sum=0;
+		string s = 'assd12we';
+		for (int i=0;i<s.length();i++) {
+		sum = sum + Integer.parseInt(s.charAt(i));
+	}
+        System.out.println(sum);
+	}

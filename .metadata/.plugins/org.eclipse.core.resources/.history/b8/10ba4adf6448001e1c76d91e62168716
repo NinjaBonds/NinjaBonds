@@ -1,0 +1,36 @@
+package day_01;
+
+public class salary {
+	
+double basic;
+double boa;
+double bonus;
+double pf;
+double monthlygr;
+double yearlygr;
+double yearlytax;
+double monthlytax;
+double monthlytkhm;
+
+double monthlygross(double basic,double boa,double bonus,double pf) {
+	
+	double monthlygr=((basic+boa+bonus)-pf);
+	double yearlygr=(monthlygr*12);
+	double yearlytax=(yearlygr*0.05);
+	double monthlytax=(yearlytax/12);
+	double monthlytkhm=(monthlygr-monthlytax);
+
+	return monthlytkhm;
+		}
+public static void main(String[] args) {
+	
+	salary obj1=new salary();
+	
+	obj1.monthlygross(7000d,5000d,2000d,0.05d);
+	
+	
+			
+
+}
+
+}

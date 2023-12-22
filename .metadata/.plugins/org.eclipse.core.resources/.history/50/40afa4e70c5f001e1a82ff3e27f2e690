@@ -1,0 +1,79 @@
+package day_01;
+import java.util.Scanner;
+public class dayofweek {
+	
+	static int number;
+    char day;	
+	void dayofw() {
+		
+		switch(number) {
+	
+		case '1':{
+			
+			
+			System.out.println("sunday");
+		//*	return day;
+			
+		}
+		case '2':{
+			
+			
+			System.out.println("Monday");
+		//*	return day;
+			
+		}
+		case '3':{
+			
+			
+			System.out.println("Tuesday");
+			//*return day;
+			
+		}
+		case '4':{
+			
+			
+			System.out.println("Wednesday");
+		//*	return day;
+			
+		}
+		case '5':{
+			
+			
+			System.out.println("Thrusday");
+			//*return day;
+			
+		}
+		case '6':{
+			
+			
+			System.out.println("Friday");
+		//*	return day;
+			
+		}
+		case '7':{
+			
+			
+			System.out.println("saturday");
+			//*return day;
+			
+		}
+		}
+	}
+	
+		
+		public static void main(String[] args) {
+			
+			
+			Scanner myobj = new Scanner(System.in);
+			System.out.println("Enter number:");
+			int numbers = myobj.nextInt();
+			
+			dayofweek obj1 = new dayofweek();
+			
+			obj1.dayofw();
+			
+			
+	}
+
+	
+}
